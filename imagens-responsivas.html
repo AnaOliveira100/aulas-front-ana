@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagens responsivas</title>
+
+</head>
+
+<body>
+    <h1>usando o elemento picture</h1>
+    <p><code>picture</code> uma tag que permite servir imagens de diferentes tamanhos conforme o tipo de midia que o
+        usuario utiliza.</p>
+
+        <h2>usando min-width (da imagem grande para o menor)</h2>
+        
+    <picture>
+        <!--telas a partir de 600px (>=) carregam ideias.jpg (grande)-->
+        <source media="(min-width: 600px)" srcset="imagens/ideias.jpg">
+        <!-- telas a partir de 400px (>=> carregam ideias-media.jpg)-->
+        <source media="(min-width: 400px)" srcset="imagens/ideias-media.jpg">
+        <!-- se nao for nehuma das condiçoes anteriores, carrega ideias-pequena-->
+        <img src="imagens/ideias-pequena.jpg" alt="">
+    </picture>
+
+    <h2>usando max-width (da imagem pequena para maior)</h2>
+
+    <picture>
+<source media="(max-width: 400px)" srcset="imagens/ideias-pequenas.jpg">
+<source media="(max-width: 600px)" srcset="imagens/ideias-pequenas.jpg">
+<img src="imagens/ideias-media.jpg" alt="">
+
+    </picture>
+
+</body>
+
+</html>
