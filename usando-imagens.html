@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando imagens no HTML</title>
+</head>
+
+<body>
+    <h1> Trabalhando com imagens</h1>
+    <hr>
+    <h2> Formatos mais comuns</h2>
+    <dl>
+        <dt>JPEG/JPG </dt>
+        <dd> Utilizado principalmente para fotos em geral com milhoes de cores e impressão</dd>
+
+        <dt> GIF</dt>
+        <dd> Voltando pára desenhos e ilustraçoes de poucas cores. Suporta tambem animaçao e transparencia</dd>
+
+        <dt>PNG </dt>
+        <dd> Usado tambem para fotos com milhoes de cores, comcompreensão <b> suporte e transparencia</b></dd>
+
+        <dt> webP</dt>
+        |<dd> Formato mais moderno, co suporte e milhoes de cores,transparencia e animação </dd>
+
+        <dt> SVG</dt>
+        <dd> formato vetorial, ou seja não tem problemas com redimensionamento, muito como para usos de logotipos e
+            desenhos</dd>
+    </dl>
+    <hr>
+
+    <h2>Exemplo</h2>
+
+    <h3> Tag e atributos</h3>
+    <!-- Sobre o atributos
+src -> indica o caminho e arquivo que sera exibido
+alt -> tewxto alternativo descrevendo brevemente a imagem (muito importante para acessibilidade da imagem)-->
+
+    <img src="imagens/pink-floyd.jpg" alt="integrantes da banda Pink floyd acenado para o publico" width="600"
+        height="375">
+
+    <h3> Imagens dentro de outras tags</h3>
+
+    <p>
+        <img src="imagens/logo-php.jpg" alt="logotipo de linguagem PHP">
+    </p>
+
+    <!--
+         havendo espaço na tela  as imagens aparecem lado a lado-->
+    <div>
+        <img src="imagens/logo-html5.png " alt="">
+        <img src="imagens/logo-css3.gif " alt="">
+        <img src="imagens/logo-javascript.gif " alt="">
+    </div>
+
+    <hr>
+
+    <div><img src="imagens/logo-html5.png " alt=""></div>
+    <div><img src="imagens/logo-css3.gif" alt=""></div>
+    <div><img src="imagens/logo-javascript.gif" alt="">
+
+        <hr>
+
+        <!-- havendo espaço fica lado a lado acabou o espaço o layout"quebra" fazendo eu as letras fiquem abaixo da outra -->
+        <div>
+            <img src="imagens/dedos.jpg" alt="">
+            <img src="imagens/pacoca.jpg" alt="">
+            <img src="imagens/ideias.jpg" alt="">
+        </div>
+
+        <h3> imagens ou ilustraçoes em geral com legenda</h3>
+
+        <figure>
+            <img src="imagens/stonehenge.jpg" alt="">
+            <figcaption>
+                foto tirada pelo fotografo Perola
+            </figcaption>
+        </figure>
+        <!-- antes do HTML : um bloco generico, com  imagense texto qualquer-->
+
+        <figure>
+            <img src="imagens/logo-php.jpg" alt="">
+            <img src="imagens/logo-mysql.gif" alt="">
+            <figcaption>Tecnologias de Back-End</figcaption>
+
+            <h4> Exemplo: Tutorial de Javascript</h4>
+            <!-- aqui temos uma ilustração
+            -->
+            <figure>
+                <pre>
+                   <code> (nota1, notas2) => (nota1 + nota2) /2 </code>
+                </pre>
+            </figure>
+            <h3>Imagens (ou ilustrações em geral) com legenda</h3>
+
+            <!-- HTML5: com semântica (a imagem tem relação com a legenda, e vice-versa) -->
+            <figure>
+                <img src="imagens/stonehenge.jpg" alt="">
+                <figcaption>
+                    Foto tirada pela fotógrafa Pérola Cavalcante
+                </figcaption>
+            </figure>
+
+            <!-- Antes do HTML5: um bloco genérico, com imagem e texto qualquer -->
+            <div>
+                <img src="imagens/stonehenge.jpg" alt="">
+                <p>Foto tirada pela fotógrafa Pérola Cavalcante </p>
+            </div>
+
+            <figure>
+                <img src="imagens/logo-php.jpg" alt="">
+                <img src="imagens/logo-mysql.gif" alt="">
+                <figcaption>Tecnologias do Back-End</figcaption>
+            </figure>
+
+            <h4>Exemplo: tutorial de JavaScript</h4>
+            <!-- Aqui temos uma ilustração de código, com um contexto
+     dado pelo figure/figcaption -->
+            <figure>
+                <pre>
+            <code> (nota1, nota2) => (nota1 + nota2) / 2 </code>
+        </pre>
+                <figcaption>
+                    Função JavaScript que recebe 2 parâmetros e realiza
+                    o cálculo matemático de média.
+                </figcaption>
+            </figure>
+            <hr>
+            <h3>Web vs JPEG</h3>
+            <img src="imagens/montanhas.webp" alt="">
+            <img src="imagens/montanhas.jpg" alt="">
+<!--se possivel, priorize o fro ato WebP por ser mais moderno e otimizado(melhor preço vs qualidade), alem de siportar transparencia e animação -->
+
+<h3>SVG: Formato de vetor para a web</h3>
+<img src="imagens/black-cat.png" alt="">
+<img src="imagens/black-cat.svg" alt="">
+
+</body>
+
+</html>

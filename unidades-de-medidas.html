@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medidas</title>
+    <style>
+        /* font size padrao 1rem= 16px */
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: rgb(207, 245, 232);
+        }
+
+        /* seletor do ID(usa #nome) #container {}  .container {}*/
+        #container {
+            border: dashed 2px #999;
+            margin-block-end: 20px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* seletor de classe usa.nome*/
+        .caixa {
+            background-color: rgb(133, 133, 230);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            margin-block-end: 10px;
+        }
+
+        /*  pixel unidades fixa/absoluta o valor nao muda de acordo com a tela */
+        .exemplo-pixels { width: 250px; }
+
+        /* porcentagem: unidade relativa/variavel o valor muda de acordo com o elemento pai */
+        .exemplo-porcentagem { width: 50%; }
+
+        /* REM unidade relativa/variavel de acordo com font-size do elemento raiz/root  html e a raiz  20x16=360 calculo */
+        .exemplo-rem { width: 20rem; }
+
+        /* VW viewport width unidade relativa/variavdel de acordo com a largura da viewport area util do navegador  */
+        .exemplo-vw { width: 50vw; }
+        /*  VW viewport height unidade relativa/variavdel de acordo com a largura da viewport area util do navegador  */
+        .exemplo-vh { height: 10vh; }
+        /*  EM unidade relativa/variavel de acordo com font size do elemento pai atençao se possivel evite usar esta medida em novos projetos */
+        .exemplo-em { width: 10em; }
+        /* o tamanho que colocamso na regra acima depende do valor declarado no font-size da regra abaixo elemento pai */
+        .container-2 {font-size: 20px; }
+
+    </style>
+</head>
+
+<body>
+    <h1>Comparando as diferentes unidades de medidas</h1>
+
+    <hr>
+    <!-- <div class="container"-->
+
+    <div ID="container">
+
+        <p><i>Este é o elemento <b>PAI</b></i></p>
+        <div class="caixa exemplo-pixels">
+            <p>Aqui usamos <b>pixel</b></p>
+        </div>
+        <div class="caixa exemplo-porcentagem">
+            <p>Aqui usamos <b>porcentagem</b></p>
+        </div>
+        <div class="caixa exemplo-rem">
+            <p>Aqui usamos <b>REM</b></p>
+        </div>
+        <div class="caixa exemplo-vw">
+            <p>Aqui usamos <b>VW</b></p>
+        </div>
+
+<div class="container-2">
+     <div class="caixa exemplo-em">
+<p>Aqui usamos <b>EM</b></p>
+    </div>
+
+    <div class="caixa exemplo-vh">
+        <p>Aqui usamos <b>VH</b></p>
+    </div>
+
+
+
+</body>
+
+</html>
