@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funçoes CSS</title>
+    <style>
+        *,  *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cor-primaria: rgb(143, 1, 1);
+            --cor-secundaria: rgb(248, 142, 225);
+            --cor-fundo: #a5e1f3fa;
+            --cor-texto: #0d0852;
+            --espacamento-padrao: 1rem;
+            --raio-borda: 8px;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2,
+        a {
+            color: var(--cor-primaria);
+        }
+
+        h2 {
+            background-color: var(--cor-fundo);
+            padding: var(--espacamento-padrao);
+            border-radius: var(--raio-borda);
+        }
+
+        a {
+            background-color: var(--cor-secundaria);
+            text-decoration: none;
+            padding-inline: var(--espacamento-padrao);
+            border-radius: var(--raio-borda);
+        }
+
+        article:has(img) {
+            border-color: rgb(19, 3, 107);
+            background-color: rgb(223, 95, 240);
+        }
+
+        article {
+            background-color: rgb(46, 11, 112);
+            border: solid 2px var(--cor-borda);
+            border-radius: 12px;
+            padding: 1.5rem;
+            max-width: 500px;
+            margin-inline: auto;
+            margin-block: 2rem;
+        }
+
+        .explicacao {
+            margin-block-end: 30px;
+            padding: 1rem;
+            background-color: white;
+            border-inline-start: solid 5px blue;
+        }
+
+        .caixa {
+            background-color: orange;
+            height: 100px;
+            width: 300px;
+            border: solid 5px red;
+            padding-block: 20px;
+            padding-inline: 10px;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <img src="imagens/front-end.jpg" alt="">
+        <h2>FUNÇÕES DO CSS</h2>
+        <p>As 4 principais funções</p>
+    </article>
+
+    <h1>Ferramentas Poderosas</h1>
+    <div class="explicacao">
+        <h2>As quatros funções min, max, calc e clamp</h2>
+        <p>As funções min(), max(), calc() e clamp() são ferramentas poderosas no CSS moderno, utilizadas para criar
+            layouts e tipografias responsivas, fluídas e dinâmicas, reduzindo a necessidade de muitas media queries.
+            Aqui está uma explicação simplificada com minhas palavras:
+        </p>
+    </div>
+
+    <div class="explicacao"></div>
+    <h2>
+        <p>1. <i>calc()</i> - O Calculador</p>
+        <p> Para que serve: Realiza cálculos matemáticos diretamente no CSS, permitindo misturar unidades diferentes
+            (como pixels, porcentagens, em, vw, etc.).
+            Exemplo: Definir a largura de um elemento como 100% da tela menos uma margem fixa de 50px.
+            css width: calc(100% - 50px);
+        </p>
+    </h2>
+    <div class="explicacao"></div>
+    <h2>
+        <p>2. <i>min()</i> - O Limitador Inferiorp</p>
+        <p>Para que serve: Compara dois ou mais valores e escolhe o menor deles para aplicar. É ótimo para
+            definir um tamanho máximo, garantindo que o elemento não fique grande demais, mas permita que ele
+            diminua se a tela for pequena.
+            Exemplo: A largura será 50% da tela, a menos que 50% seja maior que 500px. Nesse caso, a largura
+            trava em 500px.
+            css width: min(50%, 500px);
+        </p>
+    </h2>
+    <div class="explicacao"></div>
+    <h2>
+        <p>3. <i>max()</i>- O Limitador Superior</p>
+        <p>Para que serve: Compara dois ou mais valores e escolhe o maior deles. É usado para definir um
+            tamanho mínimo, garantindo que o elemento não fique invisível ou pequeno demais em telas muito
+            estreitas.
+            Exemplo: O tamanho da fonte será 2vw (responsivo), mas nunca menor que 16px.
+            css font-size: max(16px, 2vw);
+        </p>
+    </h2>
+    <div class="explicacao"></div>
+    <h2>
+        <p>4. <i>clamp()</i> - O Encaixador (Fluid Typography)</p>
+        <p>Para que serve: Define um valor responsivo que fica preso dentro de uma faixa (mínimo,
+            ideal/preferido, máximo). É o mais usado para "tipografia fluida", onde o texto cresce com a tela,
+            mas respeita um limite mínimo e máximo.
+            Sintaxe: clamp(valor_minimo, valor_ideal, valor_maximo)
+            Exemplo: A fonte nunca será menor que 1.5rem, tentará ser 4vw, e nunca passará de 3rem.
+            css font-size: clamp(1.5rem, 4vw, 3rem);
+        </p>
+    </h2>
+    <p><a href="">2026 materia CSS</a></p>
+</body>
+
+</html>

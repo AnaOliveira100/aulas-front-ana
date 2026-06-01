@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desktop-first</title>
+    <style>
+        /*etapa 1: regras base de uso geral   */
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #e6f0ff;
+        }
+
+        span {
+            background-color: darkblue;
+            color: white;
+            padding: 4px;
+        }
+
+
+        .container {
+            background-color: white;
+            width: 95%;
+            max-width: 700px;
+            margin-inline: auto;
+            margin-block-start: 0.5rem;
+            padding: 0.5rem;
+
+
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            color: darkblue;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        ul {
+            display: flex;
+            margin: 10px 0;
+            padding: 0;
+            gap: 1rem;
+            list-style: none;
+
+            li {
+                background-color: yellow;
+            }
+        }
+
+        @media (max-width: 800px) {
+            html {font-size: 16px;}
+            .container {max-widht: auto; }
+         ul {
+            display:block;
+            padding: 1rem;
+            margin-inline:  1rem;
+            
+            li { background-color: transparent; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Media Queries - <span>Mobile first</span></h1>
+        <h2>Conceito</h2>
+        <p>Media Queries são regras especiais em que criamos alterações na pagina de acordo com determinadas condiçoes
+            (exemplo: tamanho da tela).</p>
+        <p>Essas alterações ocorrem com as configurações de <b>breakpoints</b></p>
+        <p>As media queries são aplicadas de acordo com a estrategia usada para design responsivo, podendo ser;</p>
+        <ul>
+            <li><b>mobile-first</b>: do pequeno para o grande</li>
+            <li>Desktop mobile-first: do grande para o pequeno</li>
+
+        </ul>
+
+
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Layout Flexbox</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            background-color: beige;
+            padding: 1rem;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4 p {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        header {
+            background-color: dodgerblue;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+
+
+        nav a {
+            text-decoration: none;
+            background-color: yellow;
+            color: black;
+            ;
+            padding-block: 0.75rem;
+            padding-inline: 1rem;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+
+        h2,
+        p {
+            padding: 0.5rem;
+        }
+
+        footer {
+            background-color: gray;
+        }
+
+        @media (min-width: 705px) {
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            nav {
+                margin: 0;
+                display: flex;
+                gap: 0.5rem;
+            }
+
+            main {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .colunaA {
+                flex-basis: calc(60% - 0.5rem);
+            }
+
+            .colunaB {
+                flex-basis: calc(40% - 0.5rem);
+            }
+
+            .colunaC {
+                flex-basis: 100%;
+            }
+        }
+
+
+        @media (min-width: 953px) {
+            header {
+                position: static;
+            }
+
+            main {
+                max-width: 1000px;
+                margin-inline: auto;
+            }
+
+            .colunaA,
+            .colunaB,
+            .colunaC {
+                flex-basis: calc(33.33% - 1rem);
+                flex-grow: 0;
+            }
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .articleA {
+            background-color: grey;
+        }
+
+        .articleB {
+            background-color: grey;
+        }
+
+        .articleC {
+            background-color: grey
+        }
+
+        .articleD {
+            background-color: grey
+        }
+
+        h4,
+        p {
+            padding: 0.5rem;
+        }
+
+        article {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
+        }
+
+        .container {
+            background-color: #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap;
+            margin-block: 10px;
+
+            align-items: ;
+        }
+
+        .item {
+            background-color: #3498db;
+            padding: 20px;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Visao Geral</h1>
+        <nav><a href="#">Adm</a>
+        </nav>
+    </header>
+
+    <main>
+        <header>
+            <section class="cards">
+                <aside>
+                    <h2>Painel</h2>
+                    <nav>
+                        <a href="#">Dashboard</a><a href="#">Usuarios</a><a href="#">Relatorio</a>
+                        <a href="#">Configurações</a>
+                    </nav>
+                </aside>
+            </section>
+        </header>
+    </main>
+
+    <div class="container">
+        <div class="item a">Usuario 1200</div>
+        <div class="item b">Vendas R$ 8.500</div>
+        <div class="item c">Acessos</div>
+    </div>
+
+
+    <main>
+
+        <section class="cards">
+            <h4>Ultimas atividades</h4>
+            <p>lista-atividades</p>
+
+            <article class="articleA">
+                <h4>Ozzy Osbourne</h4>
+                <p>Comprou um curso avançado de JS</p>
+                <time class="_web-inspector-hide-shortcut_">Hoje</time>
+            </article>
+
+            <article class="articleB">
+                <h4>Ronnie James Dio</h4>
+                <p>Atualizou o perfil com novas informações</p>
+                <time>Ontem</time>
+            </article>
+
+            <article class="articleC">
+                <h4>Ian Gillan</h4>
+                <p>Fez login no sistema</p>
+                <time>2 dias atrás </time>
+            </article>
+
+            <article class="articleD">
+                <h4>Tony Martin</h4>
+                <p>Solicitou suporte tecnico</p>
+                <time> 3 dias atrás
+                </time>
+            </article>
+    </main>
+    </div>
+    </section>
+    </main>
+    <footer>
+
+        </div>
+        </div>
+</body>
+
+</html>
