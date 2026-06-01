@@ -1,0 +1,256 @@
+/* Regras CSS */
+
+/* Seletor TAG */
+body {
+
+    /*background-color: bisque;*/
+    /*background-image: url(../imagens/tarde.jpg);*/
+    background-image: url(../imagens/watercolor.png);
+
+    /* forçando a imagem a ocupar todo espaço disponivel*/
+    /*background-size: cover;*/
+
+    /* prendendo a imagem do fundo, evitando a rolagem*/
+    background-attachment: fixed;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    /* opacity topo pagina fica meio transparente */
+    /*opacity: 0.5;*/
+    background-color: rgba(0, 0, 0, 0.79);
+    color: white;
+    text-align: center;
+
+
+    /* Enchimento (ou espaçamento interno) */
+    padding-block: 30px;
+
+    /*usar position e top para deixar fixo no topo da tela cabeçalho/head principalmente para paginas longas */
+    position:sticky;
+    top: 0;
+
+    /*fazendo com que o header fica sempre por cima(ou frente) de outros elementos*/
+    z-index: 100;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-inline-start: solid purple 20px;
+    border-block-end: purple 4px solid;
+
+    /* Espaçamento DENTRO do elemento */
+    padding-inline-start: 30px;
+
+    /* Espaçamento FORA do elemento */
+    margin-inline-start: 10px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 26px;
+    color: white;
+    text-shadow:
+        black 0px 0px 4px,
+        rgb(0, 162, 255) 0 0 10px;
+}
+
+strong {
+    background-color: yellow;
+}
+
+/* Seletor DESCENDENTE
+Estiliza APENAS strong dentro de p */
+p strong {
+    border: solid 2px red;
+    background-color: orange;
+}
+
+main {
+    width: 80%;
+    margin-inline: auto;
+    background-color: white;
+    padding: 10px;
+    margin-block-start: 10px;
+    border-radius: 20px;
+    box-shadow: black 0px 0px 20px;
+}
+
+/* Exercício: formatação do rodapé 
+- Mude a letra
+- Alinhe o conteúdo para a "direita"
+- Aplique cor de fundo (sua escolha)
+- Aplique cor de texto (sua escolha)
+- Coloque uma borda em cima com 20px e cor (a sua escolha)
+- Espaçamento interno geral de 20px */
+
+footer {
+
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    text-align: end;
+    /*background-color: rgb(0, 238, 255);*/
+    /*background-imagem/linear-gradient pode usar top, left, right,bottom*/
+    background-image: linear-gradient(45deg, black 20%, red 10%, green 10%);
+    color: rgb(255, 0, 170);
+    background: linear-gradient(to bottom, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
+
+    border-block-start: 20px black solid;
+    padding: 20px;
+}
+
+p {
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+}
+
+/* Seletor CLASSE */
+.destaque {
+    color: darkblue;
+    font-style: italic;
+}
+
+.sombra-texto {
+    text-shadow: black 1px 1px 4px;
+}
+
+.sombra-caixa {
+    box-shadow: red 0 0 4px;
+}
+
+.link-saiba-mais a {
+    color: black;
+    text-decoration: none;
+    background-color: gold;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+/*Seletor PSEUDO-CLASSSE
+sempre incia com dois pontos:
+formalmente, a pseudo-classe esta ligada a algum elemento */
+.link-saiba-mais a:hover {
+    background-color: yellow;
+}
+
+
+/* Regras para menu de navegação */
+nav {
+    border: solid 1px white;
+    background-color: #333;
+    width: 80%;
+    margin-inline: auto;
+    border-radius: 10px;
+
+    ul {
+        /* removendo os marcadores da lista */
+        list-style: none;
+
+        /* removendo espaçamento padrão do navegador */
+        margin: 0;
+        padding: 0;
+
+        /* habilitamos o flexbox para ajustes de alinhamento */
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            height: 50px;
+            width: 150px;
+
+            /* para permitir ajuster de tamanho(largura e altura) transformamos o elemento em flex, isso tambem possibilita o uso de propriedades de alinhamenmtos*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* usamos o & para associar o :hover ao  link (tag a), associar o e &;focus para acionar o link via teclado e &:hover funcionar somente para mouse*/
+            &:hover,
+            &:focus {
+                background-color: white;
+                color: #333;
+            }
+
+            &.link-ativo {
+                background-color: yellowgreen
+            }
+
+        }
+
+    }
+}
+
+/* tornando as imagens flexiveis/responsivel */
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    max-width: 640px;
+    width: 100%;
+    margin-inline: auto;
+
+    /*tornando o figure referencia para o figcapition*/
+    position: relative;
+
+    figcaption {
+        font-weight: bold;
+        font-size: 18px;
+        position: absolute;
+        background-color: rgb(255, 0, 242);
+        /*top: 0; left: 0;*/
+        /*right: 0; top: 0;*/
+        bottom: 30px;
+        width:  100%;
+        padding-block: 10px;
+        text-align: center;
+  
+    }
+}
+/*pseudo-elemento ::marker*/
+.exemplos-comuns li::marker {
+    /* para aparece o emoji e so teclar windows +ponto*/
+ content: " 👍";
+ font-size: 20px;
+ }
+
+ /*pseudo-classe :first-child*/
+ .exemplos-comuns li:first-child {
+    font-weight: bold;
+     }
+
+     .exemplos-comuns li:last-child {
+        font-style: italic;
+     }
+
+     .exemplos-comuns li:nth-child(3) {
+        color: red;
+     }
+/*resertamos o sumary*/
+     summary {
+
+        list-style: none;
+        cursor: pointer;
+        user-select: none;
+     }
+     summary::before {
+        content: ". ";
+             }
+details[open] summary::before { content: " +";
+}

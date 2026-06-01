@@ -1,0 +1,175 @@
+/* CSS Reset: limpar regras padrão/iniciais*/
+
+/* CSS reset controlado:voce escolhe*/
+/* body, h1,h2,,p hr 
+margin: 0;
+padding: 0;*/
+
+
+header {
+    background-color: blueviolet;
+    text-align: center;
+    color: rgba(230, 228, 238, 0.918);
+    padding-block: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    color: red;
+    text-shadow: black 0 0 30px;
+}
+
+
+
+
+
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-inline-start: solid purple 20px;
+    border-block-end: purple 4px solid;
+    padding-inline-start: 30px;
+    margin-inline-start: 10px;
+}
+
+h2 {
+    border-block-start: red solid 40px;
+    border-inline: blue dotter 2px;
+}
+
+/* margin e padding
+
+*/
+
+
+
+
+h3 {
+    text-align: center;
+    font-size: 26px;
+    color: white;
+    text-shadow:
+        black 0px 0px 4px,
+        rgb(189, 50, 115) 0 0 10px;
+}
+
+main {
+    width: 80%;
+    margin-inline: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-block-start: 10px;
+    border-radius: 20px;
+    box-shadow: rgb(119, 63, 121) 0px 0px 20px;
+}
+
+
+footer {
+
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    text-align: end;
+    background-color: rgb(66, 157, 163);
+    color: rgb(132, 0, 255);
+    border-block-start: 20px pink solid;
+    padding: 20px;
+}
+
+.exemplo {
+    text-align: center;
+}
+/* transform scale(0.7);*/
+/* transform rotate(10deg)*/
+/* transforme translaste:(0);*/
+/* transform: scale(0.7);
+ transform: translate(0);
+ transition: 3s;
+ transition*/
+
+.exemplo img {
+    transform: scale(0.7) rotate(10deg) translateY(0);
+    transition: 3s;
+}
+
+/* transforme scale(1);*/
+/* transforme rotate(0);*/
+.exemplo img:hover {
+    transform: scale(1) rotate(0) translateY(-100px)
+}
+
+.exemplo-dois {text-align: center; }
+
+.exemplo-dois a {
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    background-color: yellow;
+    padding: 4px;
+    transition: 2s;
+    transform: scale(1);
+    display: inline-block;
+
+    /* display necessario para permitir efeitos de transformação display block pegua to0da linha*/
+    
+}
+.exemplo-dois a:hover{
+    background-color: lightblue;
+    transform; scale(1.2);
+}
+
+
+/*CSS NESTING aninhado*/
+/* podemos usar esse recurso para eviter de cirar diversas regras no selector descendete ou multiplas classes o Nesting ´permite permite agrupar regras do mesmom contexto o exemplo abaixo relacionado a div com a classe de exmplo*/
+
+
+.exemplo {
+    text-align: center;
+
+    img{
+    transform: scale(0.7) rotate(10deg) translateY(0);
+    transition: 3s; 
+    
+    &:hover {
+    transform: scale(1) rotate(0) translateY(-100px);
+    }
+}
+}
+
+
+img:hover {
+    transform: scale(1) rotate(0) translateY(-100px);
+}
+)
+
+
+}
+
+.exemplo img {
+    transform: scale(0.7) rotate(10deg) translateY(0);
+    transition: 3s;
+}
+
+.exemplo img:hover {
+    transform: scale(1) rotate(0) translateY(-100px)
+}
+
+.exemplo-dois {text-align: center; }
+
+.exemplo-dois a {
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    background-color: yellow;
+    padding: 4px;
+    transition: 2s;
+    transform: scale(1);
+    display: inline-block;
+
+}
+.exemplo-dois a:hover{
+    background-color: lightblue;
+    transform; scale(1.2);
+}
+
